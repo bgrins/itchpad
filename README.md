@@ -47,7 +47,7 @@ The basic workflow is generating an XPI file and adding this to the browser with
     git clone git@github.com:bgrins/itchpad.git
     cd itchpad
     npm install
-    grunt build # Will download addon sdk locally, and generate an itchpad.xpi file
+    grunt xpi # Will download addon sdk locally, and generate an itchpad.xpi file
 
 What if I don't want to use grunt?  This just wraps up the addon sdk, so if you have the cfx binary somewhere on your path, you can do whatever you want with it:
 
