@@ -6,6 +6,11 @@
   display: none;
 }
 
+/* XXX: Show menubar inline for easier debugging */
+#itchpad-menubar {
+  -moz-appearance: none;
+  border-bottom: solid 1px #ccc;
+}
 .sources-tree {
   overflow:auto;
   -moz-user-focus: true;
@@ -31,6 +36,7 @@
 
 #main-deck .sources-tree .side-menu-widget-item .file-label {
   vertical-align: middle;
+  display: inline-block;
 }
 #main-deck .sources-tree .side-menu-widget-item .file-icon {
   content: "";
@@ -95,7 +101,22 @@
   font-weight: bold;
   font-size: 1.05em;
   cursor: default;
-  line-height: 32px;
+  line-height: 35px;
+}
+
+.project-name-label {
+  font-weight: bold;
+  padding-left: 10px;
+}
+.project-version-label {
+  color: #666;
+  padding-left: 5px;
+  font-size: .9em;
+}
+.project-image {
+  max-height: 28px;
+  margin-left: -.5em;
+  vertical-align: middle;
 }
 
 #main-deck .sources-tree li.child:only-child .side-menu-widget-group-title .expander {
@@ -110,12 +131,15 @@
   padding-right: 4px;
 }
 
+.editor-image {
+  padding: 10px;
+}
 .tree-collapsed .children {
   display: none;
 }
 
 #itchpad-toolbar textbox {
-  margin: 4px;
+  margin: 0;
 }
 
 #pair-choice > toolbarbutton {
@@ -127,10 +151,12 @@
 .itchpad-file-label {
   font-weight: bold;
   padding-left: 29px;
+  vertical-align: middle;
 }
 
 .results-panel-item-match {
   font-weight: bold;
+  background: #ddf;
 }
 
 .refresh-button {
@@ -195,3 +221,11 @@
 .pane-toggle:active {
   -moz-image-region: rect(0px,32px,16px,16px);
 }
+
+
+/* Plugins */
+
+.itchpad-basic-display {
+  padding: 0 3px;
+}
+
