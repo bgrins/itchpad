@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="chrome://itchpad/content/itchpad.css" type="text/css"?>
+<?xml-stylesheet href="itchpad.css" type="text/css"?>
 <?xml-stylesheet href="chrome://browser/content/devtools/widgets.css" type="text/css"?>
 <?xml-stylesheet href="chrome://browser/content/devtools/debugger.css" type="text/css"?>
 <?xml-stylesheet href="chrome://browser/skin/devtools/common.css" type="text/css"?>

@@ -1,6 +1,13 @@
 var gItchpad = null;
 var gToolbox = null;
 
+const { classes: Cc, interfaces: Ci, utils: Cu, results: Cr } = Components;
+const require = Cu.import("resource://gre/modules/devtools/Loader.jsm", {}).devtools.require;
+try {
+  require("devtools/itchpad/lib/main");
+} catch(e) {
+  // Will fail if running in addon context
+}
 function setToolbox(toolbox) {
   window.gToolbox = toolbox;
   if (gItchpad) {
@@ -18,6 +25,8 @@ function receiveMessage(event)
     console.log("Itchpad: message with no data", event);
     return;
   }
+
+  console.log("RECEIVED MESSAGE");
 
   // XXX: This should use promises to manage asynchronous gItchpad loading,
   // but API has not yet been finalized so just storing it with a variable for now.
@@ -41,7 +50,6 @@ function receiveMessage(event)
 function init() {
   var wrapper = Components.classes["@mozilla.org/devtools/itchpad;1"].getService(Components.interfaces.nsISupports);
   var service = wrapper.wrappedJSObject;
-
   let args = window.arguments;
   let project = null;
   if (args && args[0] instanceof Components.interfaces.nsIDialogParamBlock) {
