@@ -42,8 +42,7 @@
 
     <menu id="sp-edit-menu" label="&editMenu.label;"
           accesskey="&editMenu.accesskey;">
-      <menupopup id="sp-menu_editpopup"
-                 onpopupshowing="goUpdateSourceEditorMenuItems()">
+      <menupopup id="sp-menu_editpopup">
         <menuitem id="menu_undo"/>
         <menuitem id="menu_redo"/>
         <menuseparator/>
