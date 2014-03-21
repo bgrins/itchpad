@@ -29,10 +29,5 @@
          modifiers="accel"/>
   </keyset>
 
-  <script>
-    dump("HELP\n");
-    dump(require);
-  </script>
-
   <iframe id="itchpad-iframe" flex="1" forceOwnRefreshDriver=""></iframe>
 </window>
