@@ -21,21 +21,17 @@
 
 ## Embedding
 
-Install the extension, then open a frame with the URL `chrome://itchpad/content/itchpad.xul`.
+Install the extension. Then require the Itchpad API:
 
-If you would like to set the project to open only a single path on the filesystem, you can run:
+```javascript
+let Itchpad = require("itchpad");
 
-    window.postMessage("/path/to/folder", "*")
+let iframe = document.getElementById("itchpad-iframe");
 
-This can temporarily also take the form of | separated values of path|name|version|iconUrl|iframePreview.  Iframe preview is the URL to open when the project root is clicked
+let itchpad = Itchpad.Itchpad(iframe);
 
-    window.postMessage("/path/to/folder|Project Name|Version #|icon-sample.png|http://localhost", "*");
-
-    window.postMessage("/path/to/folder", "*")
-
-Or if you have access to the gItchpad object, you can:
-
-    gItchpad.setProjectToSinglePath("/path/to/folder")
+itchpad.setProjectToSinglePath("/path/to/folder")
+```
 
 ## To Run Locally
 
