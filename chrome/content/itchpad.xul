@@ -8,15 +8,9 @@
 <?xml-stylesheet href="chrome://browser/content/devtools/markup-view.css" type="text/css"?>
 <?xml-stylesheet href="chrome://browser/skin/devtools/markup-view.css" type="text/css"?>
 
-<?xul-overlay href="chrome://global/content/editMenuOverlay.xul"?>
-
 <!DOCTYPE window [
 <!ENTITY % scratchpadDTD SYSTEM "chrome://browser/locale/devtools/scratchpad.dtd" >
  %scratchpadDTD;
-<!ENTITY % editMenuStrings SYSTEM "chrome://global/locale/editMenuOverlay.dtd">
-%editMenuStrings;
-<!ENTITY % sourceEditorStrings SYSTEM "chrome://browser/locale/devtools/sourceeditor.dtd">
-%sourceEditorStrings;
 ]>
 
 <window id="itchpad-window"
@@ -30,31 +24,12 @@
         persist="screenX screenY width height sizemode">
 
   <commandset id="itchpad-commandset" />
-  <commandset id="editMenuCommands"/>
   <keyset id="itchpad-keyset" />
-  <keyset id="editMenuKeys"/>
 
   <!-- XXX: Let plugins declare their own menu items -->
   <menubar id="itchpad-menubar">
     <menu id="file-menu" label="&fileMenu.label;" accesskey="&fileMenu.accesskey;">
       <menupopup id="file-menu-popup" />
-    </menu>
-
-    <menu id="sp-edit-menu" label="&editMenu.label;"
-          accesskey="&editMenu.accesskey;">
-      <menupopup id="sp-menu_editpopup">
-        <menuitem id="menu_undo"/>
-        <menuitem id="menu_redo"/>
-        <menuseparator/>
-        <menuitem id="menu_cut"/>
-        <menuitem id="menu_copy"/>
-        <menuitem id="menu_paste"/>
-        <menuseparator/>
-        <menuitem id="menu_selectAll"/>
-        <menuseparator/>
-        <menuitem id="menu_find"/>
-        <menuitem id="menu_findAgain"/>
-      </menupopup>
     </menu>
   </menubar>
 
