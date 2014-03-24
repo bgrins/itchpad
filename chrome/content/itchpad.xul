@@ -42,8 +42,7 @@
 
     <menu id="sp-edit-menu" label="&editMenu.label;"
           accesskey="&editMenu.accesskey;">
-      <menupopup id="sp-menu_editpopup"
-                 onpopupshowing="goUpdateSourceEditorMenuItems()">
+      <menupopup id="sp-menu_editpopup">
         <menuitem id="menu_undo"/>
         <menuitem id="menu_redo"/>
         <menuseparator/>
@@ -67,7 +66,6 @@
 
   <script type="application/javascript" src="chrome://global/content/globalOverlay.js"/>
   <script type="application/javascript;version=1.8" src="chrome://browser/content/devtools/theme-switching.js"></script>
-  <script type="application/javascript;version=1.8" src="itchpad-window.js"></script>
 
   <deck id="main-deck" flex="1">
     <vbox flex="1" id="source-deckitem">
