@@ -31,6 +31,22 @@
     <menu id="file-menu" label="&fileMenu.label;" accesskey="&fileMenu.accesskey;">
       <menupopup id="file-menu-popup" />
     </menu>
+    <menu id="edit" label="&editMenu.label;"
+          accesskey="&editMenu.accesskey;">
+      <menupopup id="menu-editpopup">
+        <menuitem id="menu_undo"/>
+        <menuitem id="menu_redo"/>
+        <menuseparator/>
+        <menuitem id="menu_cut"/>
+        <menuitem id="menu_copy"/>
+        <menuitem id="menu_paste"/>
+        <menuseparator/>
+        <menuitem id="menu_selectAll"/>
+        <menuseparator/>
+        <menuitem id="menu_find"/>
+        <menuitem id="menu_findAgain"/>
+      </menupopup>
+    </menu>
   </menubar>
 
 
