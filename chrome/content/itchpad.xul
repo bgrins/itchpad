@@ -40,9 +40,9 @@
       <menupopup id="file-menu-popup" />
     </menu>
 
-    <menu id="sp-edit-menu" label="&editMenu.label;"
+    <menu id="edit-menu" label="&editMenu.label;"
           accesskey="&editMenu.accesskey;">
-      <menupopup id="sp-menu_editpopup">
+      <menupopup id="edit-menu-popup">
         <menuitem id="menu_undo"/>
         <menuitem id="menu_redo"/>
         <menuseparator/>
